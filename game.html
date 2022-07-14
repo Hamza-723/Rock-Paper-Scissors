@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Rock-Paper-Scissors</title>
+    </head>
+    <body>
+        <script>
+            //User is prompted to input rock, paper or scissors
+            //Upon user input function for the computer's choice is invoked
+            //Another function then compares user input with computer's choice and returns win or lose
+            
+            let userSelection;
+            let computerSelection;
+
+            function computerPlay(){
+                let choiceNum=Math.floor(Math.random()*3)+1;
+
+                if (choiceNum===1){
+                    computerSelection='rock';
+                } else if (choiceNum===2){
+                    computerSelection='paper'; 
+                } else {
+                    computerSelection='scissors';
+                }
+            }
+            
+            computerPlay();
+            
+            
+            function quickGame(userSelection,computerSelection){
+                userSelection.toLowerCase();
+                if (userSelection==='rock'&& computerSelection==='rock' ||
+                    userSelection==='paper'&& computerSelection==='paper' ||
+                    userSelection==='scissors'&& computerSelection==='scissors'){
+                    return 'It\'s a draw.'
+                } else if (userSelection==='rock' && computerSelection==='paper'){
+                    return 'You Lose! Paper beats rock.'
+                } else if (userSelection==='rock' && computerSelection==='scissors'){
+                    return 'You Win! Rock beats scissors.'
+                } else if (userSelection==='paper' && computerSelection==='scissors'){
+                    return 'You Lose! Scissors beats paper.'
+                } else if (userSelection==='paper' && computerSelection==='rock'){
+                    return 'You Win! Paper beats rock.'
+                } else if (userSelection==='scissors' && computerSelection==='rock'){
+                    return 'You Lose! Rock beats scissors.'
+                } else if (userSelection==='scissors' && computerSelection==='paper'){
+                    return 'You Win! Scissors beats paper.'
+                } else {
+                    return 'Incorrect input';
+                }
+            }
+
+        
+        </script>
+    </body>
+</html>
