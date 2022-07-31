@@ -19,7 +19,7 @@
                 }
             }
             
-            
+            computerPlay();
             
             function playRound(userSelection,computerSelection){
                 userSelection.toLowerCase();
@@ -51,5 +51,10 @@
             }
         
         const rock=document.getElementById('rock');
+            rock.addEventListener('click',()=>{ console.log(playRound('rock',computerSelection))});
+        
         const paper=document.getElementById('paper');
+            paper.addEventListener('click',()=> { console.log(playRound('paper',computerSelection))});
+
         const scissors=document.getElementById('scissors');
+            scissors.addEventListener('click',()=>{ console.log(playRound('scissors',computerSelection))});
