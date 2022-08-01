@@ -73,19 +73,34 @@
      
         }
 
+
         const rock=document.getElementById('rock');
             rock.addEventListener('click',()=>{ para1.textContent=playRound('rock',computerPlay());
             para2.textContent=`Player Score:${playerScore}       Computer Score:${computerScore}`;
+            if(playerScore==5){
+                alert('Player has won!')
+            } else if(computerScore==5){
+                alert('Computer has won!')
+            };
+            
             });
         
         const paper=document.getElementById('paper');
             paper.addEventListener('click',()=> { para1.textContent=playRound('paper',computerPlay());
-            para2.textContent=`Player Score:${playerScore}       Computer Score:${computerScore}`;});
+            para2.textContent=`Player Score:${playerScore}       Computer Score:${computerScore}`;
+            if(playerScore==5){
+                alert('Player has won!')
+            } else if(computerScore==5){
+                alert('Computer has won!')
+            };
+            });
 
         const scissors=document.getElementById('scissors');
             scissors.addEventListener('click',()=>{ para1.textContent=playRound('scissors',computerPlay())
-            para2.textContent=`Player Score:${playerScore}       Computer Score:${computerScore}`;});
-
-
-
-        
+            para2.textContent=`Player Score:${playerScore}       Computer Score:${computerScore}`;
+            if(playerScore==5){
+                alert('Player has won!')
+            } else if(computerScore==5){
+                alert('Computer has won!')
+            };
+        });
